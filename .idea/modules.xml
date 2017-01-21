@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ImageTranslator.iml" filepath="$PROJECT_DIR$/ImageTranslator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/image-translator.iml" filepath="$PROJECT_DIR$/image-translator.iml" />
     </modules>
   </component>
 </project>
