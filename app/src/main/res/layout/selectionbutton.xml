@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+    <Button
+        android:text="Take a Picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/button"
+        android:layout_weight="0.07"
+        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+        android:elevation="0dp"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:background="@color/md_blue_grey_100"
+        android:visibility="visible"
+        android:paddingBottom="@dimen/material_drawer_account_header_height_compact"
+        android:paddingEnd="@dimen/material_drawer_account_header_height_compact"
+        android:paddingLeft="@dimen/material_drawer_account_header_height_compact"
+        android:paddingRight="@dimen/material_drawer_account_header_height_compact"
+        android:paddingStart="@dimen/material_drawer_account_header_height_compact"
+        android:elegantTextHeight="?android:attr/windowTranslucentNavigation"
+        android:letterSpacing="17"
+        android:textSize="@dimen/material_drawer_item_primary_icon"
+        android:textColor="?attr/borderlessButtonStyle"
+        tools:textStyle="bold"
+        android:onClick="btnListener" />
+</LinearLayout>

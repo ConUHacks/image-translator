@@ -11,4 +11,6 @@
 
     <string name="upload_image_hint">Click the button in the bottom-right corner to upload an image!</string>
 
+    <string name="album_name">ImageTranslate</string>
+
 </resources>

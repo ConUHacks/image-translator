@@ -17,6 +17,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import android.net.Uri;
+import java.io.File;
 
 public final class ClarifaiUtil {
   private ClarifaiUtil() {
@@ -29,11 +31,13 @@ public final class ClarifaiUtil {
    * @return
    */
   @Nullable
-  public static byte[] retrieveSelectedImage(@NonNull Context context, @NonNull Intent data) {
+  public static byte[] retrieveSelectedImage(@NonNull Context context, String path) {
     InputStream inStream = null;
     Bitmap bitmap = null;
+    File f = new File(path);
+    Uri imageUri = Uri.fromFile(f);
     try {
-      inStream = context.getContentResolver().openInputStream(data.getData());
+      inStream = context.getContentResolver().openInputStream(imageUri);
       bitmap = BitmapFactory.decodeStream(inStream);
       final ByteArrayOutputStream outStream = new ByteArrayOutputStream();
       bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outStream);
