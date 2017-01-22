@@ -15,9 +15,6 @@ apply plugin: "com.neenbedankt.android-apt"
 
 repositories {
   jcenter()
-  maven {
-    url "https://jitpack.io"
-  }
 }
 
 android {
@@ -57,8 +54,6 @@ dependencies {
   apt "com.jakewharton:butterknife-compiler:8.4.0"
 
   compile 'com.loopj.android:android-async-http:1.4.9'
-
-  compile 'com.github.vbauer:yandex-translate-api:1.2.4'
 
 
 }
