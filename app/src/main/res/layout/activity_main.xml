@@ -9,23 +9,35 @@
         android:layout_width="match_parent"
         android:layout_height="170pt" />
     <TextView android:id="@+id/textCaptured"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="10pt"
         android:text="Words in English" />
     <TextView android:id="@+id/textTranslated"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="10pt"
         android:text="Words in French" />
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="50dp"
         android:orientation="horizontal">
-        <Button
-            android:layout_width="384dp"
-            android:layout_height="58dp"
+        <Button android:id="@+id/buttonToCapture"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
             android:text="@string/button_send"
             android:onClick="captureImage"/>
+        <Spinner
+            android:id="@+id/language_spinner"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:entries="@array/language_spinner"
+            android:prompt="@string/defaultlang" />
     </LinearLayout>
 </LinearLayout>

@@ -3,4 +3,11 @@
     <string name="edit_message">Enter a message</string>
     <string name="button_send">New Image</string>
     <string name="album_name">ImageTranslate</string>
+    <string name="defaultlang">Languages</string>
+    <string-array name="language_spinner">
+            <item>French</item>
+            <item>Spanish</item>
+            <item>Iroquois</item>
+    </string-array>
+
 </resources>
