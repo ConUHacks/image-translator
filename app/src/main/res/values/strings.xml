@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">MyFirstApp</string>
-    <string name="edit_message">Enter a message</string>
-    <string name="button_send">New Image</string>
-    <string name="album_name">ImageTranslate</string>
-</resources>
