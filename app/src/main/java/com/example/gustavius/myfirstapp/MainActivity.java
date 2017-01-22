@@ -2,37 +2,34 @@ package com.example.gustavius.myfirstapp;
 
 import android.net.Uri;
 import android.os.Environment;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.content.Intent;
 import android.util.Log;
+import java.util.Date;
 import android.view.View;
 import android.graphics.Bitmap;
-
+import android.graphics.BitmapFactory;
 import android.widget.ImageView;
 import android.widget.AdapterView;
-
-import android.app.Activity;
 import android.widget.AdapterView.OnItemSelectedListener;
-
-
+import android.app.Activity;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+
 
 
 public class MainActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
-    static final int SELECT_PICTURE = 10;
 
     private static final String JPEG_FILE_PREFIX = "IMG_";
     private static final String JPEG_FILE_SUFFIX = ".jpg";
     private static final String CAMERA_DIR = "/dcim/";
 
-    private ImageView imageView; //displayed image back to user
-    private Bitmap imageBitmap; //send to the API
+    /**private ImageView imageView; //displayed image back to user
+    private Bitmap imageBitmap; //send to the API**/
 
     private String currentPhotoPath; //path where image is storred in gallery
 
@@ -130,18 +127,10 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK) {
-            galleryAddPic();
-            //displayPic();
-            //clarifai
-            //translate
-        }
-
-
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            imageBitmap = (Bitmap) extras.get("data");
-            imageView.setImageBitmap(imageBitmap);
+        if (resultCode == RESULT_OK) { //ADDS PIC TO GALLERY AND DISPLAYS IT IN imageView
+            galleryAddPic(); //add pic to gallery
+            ImageView imageView = (ImageView) findViewById(R.id.capturedImage);
+            imageView.setImageBitmap(BitmapFactory.decodeFile(currentPhotoPath));
         }
     }
 
@@ -169,11 +158,11 @@ public class MainActivity extends AppCompatActivity {
             {
 
             }
-            else if(parent.getItemAtPosition(pos) == 0) //iroquois
+            else if(parent.getItemAtPosition(pos) == 2) //iroquois
             {
 
             }
-            else //french
+            else //french. position 0 and by default. Parce que nous sommes au Quebec ici.
             {
 
             }
